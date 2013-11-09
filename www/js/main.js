@@ -1,32 +1,27 @@
-﻿//functions
+﻿
+$(document).ready(function () {
+    var id = getQueryStringParameterByName("id");
+    main.init(id);
+});
+var main = {
+    init: function (id) {
+        var $defer = $.ajax({
+            url: 'http://data.gonation.com/pl/get?profile_id=' + id,
+            type: 'GET',
+            dataType: 'jsonp',
+            success: function (data) {
 
+            },
+            error: function (data) {
+                //console.log('error');
+            }
+        });
 
-function GetCurrUserInfo(guid)
-{
-    return {
-        firstname: "Sahil",
-        lastname: "Panwar",
-        middleInitial: "",
-        companyAddress: "123 Fake St",
-        city: "Hamden",
-        state: "CT",
-        country: "USA",
-        email: "sahil.panwar@gmail.com",
-        phone: "203-393-5373",
-        fax: "",
-        blurb: "Finally, no more business cards going through the washing machine.",
-        url: "http://www.bing.com",
-        imageURL: ""
-    };
-}
-
-
-//api calls
+    },
 
 
 
-
-
+};
 
 
 function getUserInfo() {
