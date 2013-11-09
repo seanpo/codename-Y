@@ -14,12 +14,15 @@
       "guid",
       "first_name",
       "last_name",
+      "password",
       "email",
       "position",
       "company",
       "address",
       "url",
+      "image",
       "phone",
+      "fax",
       "description"
     );
   }

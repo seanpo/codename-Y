@@ -1,0 +1,3 @@
+<?php
+  $bucketName = "contact-avatar";
+?>
