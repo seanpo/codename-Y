@@ -33,12 +33,25 @@
             map.LoadMap();
             //map.LoadMap(new VELatLong(47.62054, -122.34947), 16, VEMapStyle.Road, false);
         }
+        function getMapCentering() {
+            var locationArr = new Array();
+            if (map.entities != null && map.entities.getLength() > 0) {
+                var length = map.entities.getLength();
+                for (var i = 0; i < length; i++) {
+                    locationArr.push(map.entities.get(i).getLocation());
+                }
+            }
+            map.setView(
+            {
+                bounds: Microsoft.Maps.LocationRect.fromLocations(locationArr)
+            });
+        }
     </script>
 
 </head>
 <body onload="GetMap();">
     <script type="text/javascript" src="/cordova-2.3.0.js"></script>
-    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <div id="BusinessCard">
         <div id="businessPhoto" class="businessInline">
@@ -63,9 +76,7 @@
         <div id="Contacts">
         </div>
     </div>
-	<div class="Flexible-container">
     <div id="myMap" style="position: relative; width: 480px; height: 400px;"></div>
-	</div>
 
     <div style="display: none;"></div>
     <div>

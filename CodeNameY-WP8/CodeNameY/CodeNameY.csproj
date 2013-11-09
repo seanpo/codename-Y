@@ -148,9 +148,11 @@
     <Content Include="www\www\img\logo.png" />
     <Content Include="www\index.html" />
     <Content Include="www\index.js" />
+    <Content Include="www\www\img\shake.png" />
     <Content Include="www\www\js\home.js" />
-    <Content Include="www\www\js\jQuery.js" />
+    <Content Include="www\www\js\plugins.js" />
     <Content Include="www\www\js\main.js" />
+    <Content Include="www\www\js\registration.js" />
     <Content Include="www\www\js\template.js" />
     <Content Include="www\www\home.html" />
     <Content Include="www\www\main.html" />

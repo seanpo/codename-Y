@@ -20,7 +20,7 @@ var main = {
                 $('#company').text(dVal.company);
                 $('#addressLn').text(dVal.address);
                 $('#website').text(dVal.url);
-                $('#businessPhotoImg').attr('src', dVal.image);
+                //$('#businessPhotoImg').attr('src', dVal.image);
                 $('#phone').text(dVal.phone);
                 $('#fax').text(dVal.fax);
                 $('#blurb').text(dVal.description);
@@ -37,27 +37,35 @@ var main = {
             dataType: 'jsonp',
             success: function (data) {
                 var s = "";
-                for (var i = 0; i < data.length; i++) {
-                    contacts = data;
-                    var dVal = data[i];
+				contacts= _.sortBy(data, function(a, b){ return new Date(a.timestamp).getTime()-new Date(b.timestamp).getTime() });
+                for (var i = 0; i < contacts.length; i++) {
+                    var dVal = contacts[i];
                     s += "<div class=\"fName\">" + dVal.first_name + "</div>";
                     s += "<div class=\"lName\">" + dVal.last_name + "</div>";
                     s += "<div class=\"email\">" + dVal.email + "</div>";
                     s += "<div class=\"company\">" + dVal.company + "</div>";
                     s += "<div class=\"addressLn\">" + dVal.address + "</div>";
                     s += "<div class=\"website\">" + dVal.url + "</div>";
-                    s += "<div class=\"businessPhoto\"><img src=\"" + dVal.image + "\" class=\"businessPhotoImg\" /></div>";
+                    //s += "<div class=\"businessPhoto\"><img src=\"" + dVal.image + "\" class=\"businessPhotoImg\" /></div>";
                     s += "<div class=\"phone\">" + dVal.phone + "</div>";
                     s += "<div class=\"fax\">" + dVal.fax + "</div>";
                     s += "<div class=\"blurb\">" + dVal.description + "</div>";
+
+                    //add pushpin to bing api
+                    var latLong = dVal.location.split(',');
+                    latLong = new VELatLong(latLong[0], latLong[1]);
+                    var pushpin = new VEShape(VEShapeType.Pushpin, latLong);
+                    map.AddShape(pushpin);
+                    //map.SetView(Microsoft.Maps.LocationRect.CreateLocationRect(latLong));
                 }
+                //getMapCentering();
                 $('#Contacts').append(s);
             },
             error: function (data) {
                 //console.log('error');
             }
         });
-
+		
     },
 };
 
