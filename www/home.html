@@ -24,23 +24,30 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <title>Hello World</title>
+        <title>Super Handshake</title>
     </head>
-    <body>
-        <div>
-            <div id="uuid"></div>
-            awesome <br />
-            awesome <br />
-            awesome <br />
-            awesome <br />
-            awesome <br />
-            awesome <br />
-        </div>
-        <script type="text/javascript" src="/cordova-2.3.0.js"></script>
-        <script type="text/javascript" src="js/jQuery.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/home.js"></script>
-        <script type="text/javascript">
+	
+	<div id="main_site">
+		<div id="logo">
+			<img src="img/shake.png"/>
+		</div>
+		<h1>Super Handshake</h1>
+		<input id="email" class="full_width default" type="text" default="email@domain.com">
+		<input id="password" class="full_width default" type="text" default="*****">
+		<button id="submit" class="full_width">Submit</button>
+		<p class="tinytext">Click <a href="/create.php">here</a> if you do not already have an account!</p>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/js/lib/utils.js"></script>
+	<script type="text/javascript" src="/static/js/lib/bingMaps.js"></script>
+	<script type="text/javascript" src="/static/js/lib/utils.js"></script>
+	<script type="text/javascript" src="/static/js/login.js"></script>
+	<script type="text/javascript" src="/cordova-2.3.0.js"></script>
+	<script type="text/javascript" src="js/jQuery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript">
             app.initialize();
         </script>
     </body>
