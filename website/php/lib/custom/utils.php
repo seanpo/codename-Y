@@ -8,4 +8,25 @@
 		}
 		return $pageURL;
 	}
+
+  function get($key, $default = "", $required = false) {
+    if (!isset($_GET[$key])) {
+      return notFound($default, $require);
+    }
+    return $_GET[$key];
+  }
+
+  function post($key, $default = "", $required = false) {
+    if (!isset($_POST[$key])) {
+      return notFound($default, $require);
+    }
+    return $_POST[$key];
+  }
+
+  function notFound($default, $required) {
+    if ($required) {
+      throw new Exception("key: $key, not found.");
+    }
+    return $default;
+  }
 ?>
