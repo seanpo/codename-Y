@@ -1,63 +1,73 @@
 ﻿body {
-  background-color: rgb(180, 10, 10);
-	margin: auto;
-	font-family: helvetica;
+    background-color: rgb(180, 10, 10);
+    margin: auto;
+    height: 100%;
+    width: 800px;
+    font-family: helvetica;
 }
 
 input {
-  font-size: 18px;
+    font-size: 45px;
 }
 
-h1, h2, p, button, a{
-  color: white;
+h1, h2, p, button {
+    color: white;
 }
+
 p {
-  margin: 0;
+    margin: 0;
 }
 
 input, button {
-  border: none;
-  height: 50px; 
-  width: 80%;
-  border-radius: 5px;
-  margin-top: 2%;
-  padding-left: .5em;
-  margin-bottom: .5%;
+    border: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 button {
-  background-color: #462555;
+    background-color: #462555;
 }
 
 .tinytext {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .default {
-  color : gray;
+    color: gray;
 }
 
-#name{
-	margin-top:1em;
-	margin-bottom:1em;
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+    body {
+        width: auto;
+        text-align: center;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+        #logo img {
+            max-width: 50%;
+        }
 }
 
-@media only screen
-	and (min-width : 320px)
-	and (max-width : 480px) {
-	
-	body{
-		padding-top:1em;
-		width:auto;
-		text-align: center;
-	}
-	
-	#logo{
-		text-align:center;
-	}
-	
-	#logo img{
-		max-width: 50%;
-	}
-	
-	}
+
+/* Main.html */
+
+.businessInline {
+    display: inline-block;
+}
+
+#businessPhotoImg, #businessPhoto {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    vertical-align: top;
+}
+
+#businessFields {
+}
