@@ -24,3 +24,4 @@ function getQueryStringParameterByName(name) { //query string |||| http://stacko
 }
 
 
+var server = "172.26.5.106";

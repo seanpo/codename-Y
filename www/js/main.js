@@ -1,16 +1,17 @@
 ﻿
 $(document).ready(function () {
     var id = getQueryStringParameterByName("id");
+    id = 1;
     main.init(id);
 });
 var main = {
     init: function (id) {
         var $defer = $.ajax({
-            url: 'http://data.gonation.com/pl/get?profile_id=' + id,
+            url: 'http://' + server + 'listUser.php?id=' + id,
             type: 'GET',
             dataType: 'jsonp',
             success: function (data) {
-
+                var j = data;
             },
             error: function (data) {
                 //console.log('error');
@@ -20,7 +21,6 @@ var main = {
     },
 
 
-
 };
 
 
@@ -28,19 +28,19 @@ function getUserInfo() {
     var dataPointer = new Object();
 
     var $defer = $.ajax({
-        url: 'http://data.gonation.com/pl/get?profile_id='+gonationID,
+        url: 'http://data.gonation.com/pl/get?profile_id=' + gonationID,
         type: 'GET',
         dataType: 'jsonp',
-        success: function(data){
+        success: function (data) {
             dataPointer.data
             //console.log(data);
         },
-        error: function(data){
+        error: function (data) {
             //console.log('error');
         }
     });
 
-    $defer.success(function(){
+    $defer.success(function () {
 
         //console.log($('#menu-selection select'));
     });
