@@ -35,7 +35,7 @@ for (var i = 0; i < $users.length; i++) {
   if (loc) {
     loc = loc.split(",");
     var id = $user.attr("id");
-    infobox = bingMap.createInfoBox(id, $user, locationRect);
+    infobox = bingMap.createInfoBox(id, $user, loc[0], loc[1]);
     bingMap.addPushpin(loc[0], loc[1], infobox, $user.attr("image"));
   }
 }
