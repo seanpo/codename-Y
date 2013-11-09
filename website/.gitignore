@@ -3,3 +3,4 @@ php/.*
 *.~
 *.swp
 *.swo
+./cache/mustache/*

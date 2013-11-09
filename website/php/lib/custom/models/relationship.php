@@ -1,10 +1,12 @@
 <?php
   require_once $_SERVER["DOCUMENT_ROOT"]."/conf/config.php";
   require_once $_SERVER["DOCUMENT_ROOT"]."/lib/custom/models/model.php";
+  require_once $_SERVER["DOCUMENT_ROOT"]."/lib/custom/models/user.php";
 
   class Relationship extends Model {
     public function __construct($elements) {
       parent::__construct($elements);
+
     }
 
     static public $class = Relationship;

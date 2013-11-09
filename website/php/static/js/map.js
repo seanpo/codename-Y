@@ -1,35 +1,41 @@
-$('#facebook_connect').click(function () {
-  FB.login(function(response) {
-    var genderLookup = { "male": 2, "female": 1 };
-    if (response.authResponse) {
-      FB.api('/me', function(response) {
-        var data = {
-          id: response.id,
-          first_name: response.first_name,
-          last_name: response.last_name,
-          email: response.email,
-          locale: response.locale,
-          gender: genderLookup[response.gender] || 0,
-          birthday: response.birthday 
-        };
-          
-        data = response;
-        $.ajax({
-          url: "/saveUser.php",
-          type: "POST",
-          data: data,
-          dataType: "json",
-          success: function(response) {
-            console.log("User successfully saved : " + response);
-            window.location = "/palette.php";
-          }, 
-          error: function(response) {
-            console.log("User unsuccessfully saved : " + response);
-          }
-        });
-      }); 
-    } else {
-      console.log('User cancelled login or did not fully authorize.');
-    }   
-  }, { scope : "email, user_birthday" }); 
-});
+var north;
+var south;
+var east;
+var west;
+var $locations = $('[location]');
+for (var i = 0; i < $locations.length; i++) {
+  var $loc = $($locations[i]).attr("location").split(",");
+  if (i == 0) {
+    east = west = $loc[0];
+    north = south = $loc[1];
+  } else {
+    if (east < $loc[0]) {
+      east = $loc[0];
+    } 
+    if (west > $loc[0]) {
+      west = $loc[0];
+    }
+    if (north < $loc[1]) {
+      north = $loc[1];
+    }
+    if (south > $loc[1]) {
+      south = $loc[1];
+    }
+  }
+}
+
+var locationRect = Microsoft.Maps.LocationRect.fromCorners(new Microsoft.Maps.Location(east, south-10), new Microsoft.Maps.Location(west, north+10));
+
+var bingMap = new BingMaps("map", "Atfvzg0fcsby0NIxAo6aOjUlHNfALGhGsu1wQPOZWmIw2JRf8pomRxI6zOuO3jbu", locationRect);
+
+var $users = $('.user');
+for (var i = 0; i < $users.length; i++) {
+  var $user = $($users[i]);
+  var loc = $user.attr("location");
+  if (loc) {
+    loc = loc.split(",");
+    var id = $user.attr("id");
+    infobox = bingMap.createInfoBox(id, $user, locationRect);
+    bingMap.addPushpin(loc[0], loc[1], infobox, $user.attr("image"));
+  }
+}

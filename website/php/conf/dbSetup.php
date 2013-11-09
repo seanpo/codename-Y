@@ -16,7 +16,7 @@
     DB::$dbName = getenv("OPENSHIFT_APP_NAME");
   } else {
     DB::$user = "root";
-    DB::$password = "mjttt123";
+    DB::$password = "Ch!n3rrr";
     DB::$dbName = "codenamey";
   }
 ?>

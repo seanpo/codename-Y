@@ -2,7 +2,7 @@ body {
   background-color: rgb(180, 10, 10);
 	margin: auto;
   height: 100%;
-  width: 800px;
+  width: 80%;
 	font-family: helvetica;
 }
 
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-  background-color: #570066;
+  background-color: #680088;
      -webkit-transition: background-color 1000ms linear;
      -moz-transition: background-color 1000ms linear;
      -o-transition: background-color 1000ms linear;

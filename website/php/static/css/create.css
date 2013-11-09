@@ -2,3 +2,7 @@
   padding: 1%;
   position: relative;
 }
+
+#description {
+  height: 200px;
+}

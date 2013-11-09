@@ -2,6 +2,7 @@
   require_once $_SERVER["DOCUMENT_ROOT"]."/lib/custom/models/user.php";
   require_once $_SERVER["DOCUMENT_ROOT"]."/lib/custom/utils.php";
 
+  $callback = post("callback", "", true);
   $elements = array(
     "guid" => uniqid("?!", true),
     "first_name" => post("first_name", "", true),
@@ -21,5 +22,10 @@
   $user =  new Users($elements);
   $id = $user->write();
 
-  return json_encode(array("id" => $id, "guid" => $user->guid));
+  $json = json_encode(array("id" => $id, "guid" => $user->guid));
+  if ($callback) {
+    echo "$callback($json);";
+  } else {
+    echo $json;
+  }
 ?>

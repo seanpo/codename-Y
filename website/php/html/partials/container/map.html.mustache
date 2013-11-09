@@ -1,6 +1,44 @@
-<div id="logo"> </div>
-<h1>Login to Codename Y</h1>
-<input id="email" type="text" default="email@domain.com"/>
-<input id="password" type="text" default="*****"/>
-<button id="submit" class="pointerCursor">Submit</button>
-<p class="tinytext">Click <a href="/create.php">here</a> if you do not already have an account!</p>
+<div id='map' userId="{{userId}}"> </div>
+<div id='user_container'>
+  {{#users}}
+    <div id="{{id}}" class="user pointerCursor" location="{{location}}" image="{{image}}">
+      <div class="name">
+        <p>{{first_name}} {{last_name}}</p>
+      </div>
+      <div class="email pointerCursor">
+        <p>{{email}}</p>
+      </div>
+    </div> 
+  {{/users}}
+</div>
+<div id='infobox' hidden>
+  {{#users}}
+    <div id='{{id}}_infobox'> 
+      <div class="infobox">
+        <img class='avatar' src="{{image}}"/>
+        <div class='name'><p>Name: {{first_name}} {{last_name}}</p></div>
+        <div class='email'><p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{email}}&tf=1">{{email}}</a></p></div>
+        {{#company}}
+          {{#position}}
+            <div class='company'><p>At: {{company}} as {{position}}</p></div>
+          {{/position}}
+        {{/company}}
+        {{#address}}
+          <div class='address'><p>Address: {{address}}</p></div>
+        {{/address}}
+        {{#url}}
+          <div class='url'><p>Website: {{url}}</p></div>
+        {{/url}}
+        {{#fax}}
+          <div class='fax'><p>Fax: {{fax}}</p></div>
+        {{/fax}}
+        {{#phone}}
+          <div class='phone'><p>Phonenumber: {{phone}}</p></div>
+        {{/phone}}
+        {{#description}}
+          <div class='description'><p>A little about the user: {{description}}</p></div>
+        {{/description}}
+      </div>
+    </div>
+  {{/users}}
+</div>
