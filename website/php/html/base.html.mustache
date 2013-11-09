@@ -1,0 +1,22 @@
+<html>
+  <head>
+    {{#stylesheets}}
+      {{>shared/stylesheet.html}}
+    {{/stylesheets}}
+    <title>
+      {{#title}}
+        {{.}}
+      {{/title}}
+    </title>
+  </head>
+  <body>
+		<div id="main_site">
+      {{>arbiter.html}}
+		</div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    {{#javascripts}}
+      {{>shared/javascript.html}}
+    {{/javascripts}}
+  </body>
+</html>

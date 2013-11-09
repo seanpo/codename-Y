@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(180, 10, 10);
+	margin: auto;
+  height: 100%;
+  width: 800px;
+	font-family: helvetica;
+}
+
+input {
+  font-size: 45px;
+}
+
+h1, h2, p, button {
+  color: white;
+}
+
+.pointerCursor:hover {
+	cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+input, button {
+  border: none;
+  height: 50px; 
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+button {
+  background-color: #462555;
+}
+
+button:hover {
+  background-color: #570066;
+     -webkit-transition: background-color 1000ms linear;
+     -moz-transition: background-color 1000ms linear;
+     -o-transition: background-color 1000ms linear;
+     -ms-transition: background-color 1000ms linear;
+     transition: background-color 1000ms linear;
+}
+
+.tinytext {
+  font-size: 10px;
+}
+
+.default {
+  color : gray;
+}
+

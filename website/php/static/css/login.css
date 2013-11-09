@@ -1,0 +1,10 @@
+#main_site {
+  padding: 10%;
+  position: relative;
+  top: 21%;
+}
+
+p, h1 {
+  width: 100%;
+  text-align: center;
+}
