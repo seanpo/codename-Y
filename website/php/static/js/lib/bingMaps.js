@@ -1,5 +1,6 @@
 var BingMaps = function (id, apiKey, locationRect) {
   var $this = this;
+  this.infoboxList = [];
   this.dom = document.getElementById(id);
   this.map = new Microsoft.Maps.Map(this.dom, {
     credentials: apiKey,
@@ -27,21 +28,31 @@ var BingMaps = function (id, apiKey, locationRect) {
     var pushpin = new Microsoft.Maps.Pushpin(loc, pushpinOptions);
 
     if (infobox) {
-      function displayInfobox(e)
+      infobox.displayInfobox = function(e)
       {
         infobox.setOptions({ visible:true });
-      }
+      };
 
-      function hideInfobox(e)
+      infobox.hideInfobox = function(e)
       {
         infobox.setOptions({ visible: false });
-      }
+      };
 
-      Microsoft.Maps.Events.addHandler(pushpin, 'click', displayInfobox);
-      Microsoft.Maps.Events.addHandler($this.map, 'click', hideInfobox);
-      Microsoft.Maps.Events.addHandler($this.map, 'viewchange', hideInfobox);
-      infobox.element.toggle(displayInfobox, hideInfobox);
+      Microsoft.Maps.Events.addHandler(pushpin, 'click', infobox.displayInfobox);
+      infobox.element.click(function() {
+        for (var i = 0; i < $this.infoboxList.length; i++) {
+          $this.infoboxList[i].hideInfobox();
+        }
+        if ($(this).hasClass('selected')) {
+          $('.selected').removeClass('selected'); 
+        } else {
+          infobox.displayInfobox();
+          $('.selected').removeClass('selected'); 
+          $(this).addClass('selected'); 
+        }
+      });
       $this.map.entities.push(infobox);
+      $this.infoboxList.push(infobox);
     }
 
     $this.map.entities.push(pushpin); 

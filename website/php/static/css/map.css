@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 #map, #user_container {
@@ -41,12 +42,15 @@ body {
 }
 
 .user:hover {
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.selected, .user:hover {
   background-color: #680088;
-     -webkit-transition: background-color 1000ms linear;
-     -moz-transition: background-color 1000ms linear;
-     -o-transition: background-color 1000ms linear;
-     -ms-transition: background-color 1000ms linear;
-     transition: background-color 1000ms linear;
 }
 
 a:link {text-decoration:none;}
