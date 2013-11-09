@@ -94,6 +94,10 @@
       return !empty($readValue);
     }
 
+    public function toJson() {
+      return json_encode($this->elements);
+    }
+
     private function identificationString() {
       $expression = null;
       foreach (static::$columnList as $column) {
@@ -132,8 +136,7 @@
         array_push($objs, new static::$class($element)); 
       }
 
-      //TODO: Fix this. Just return $objs
-      return count($objs) == 1? $objs[0] : $objs;
+      return $objs;
     }
   }
 
