@@ -1,12 +1,12 @@
 <?php
   require_once $_SERVER["DOCUMENT_ROOT"]."/controller/baseController.php";
 
-	class Palette extends BaseController {
+	class Map extends BaseController {
     public $modules;
 
 		public function __construct() {
       $this->map = true;
-			$this->title = "CodenameY";
+			$this->title = "CodenameY - Map";
 		}
 
     private function setupAssets() {

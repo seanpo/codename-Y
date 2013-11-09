@@ -1,10 +1,13 @@
 #main_site {
-  padding: 10%;
+  padding: 5%;
   position: relative;
-  top: 21%;
 }
 
-p, h1 {
-  width: 100%;
-  text-align: center;
+#logo {
+  background-image: url("/static/img/shake.png");
+  background-size: 100% 100%;
+  width: 420px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }

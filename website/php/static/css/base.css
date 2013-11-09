@@ -7,7 +7,12 @@ body {
 }
 
 input {
-  font-size: 45px;
+  font-size: 35px;
+}
+
+p, h1 {
+  width: 100%;
+  text-align: center;
 }
 
 h1, h2, p, button {
@@ -22,13 +27,15 @@ p {
   margin: 0;
 }
 
-input, button {
+input, button, textarea {
   border: none;
-  height: 50px; 
-  width: 100%;
   border-radius: 5px;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+input, button {
+  height: 40px; 
 }
 
 button {
@@ -52,3 +59,18 @@ button:hover {
   color : gray;
 }
 
+.max_width, .half_width {
+  float: left;
+}
+
+.full_width {
+  width: 99%;
+  max-width: 99%;
+  margin-left: 1%;
+}
+
+.half_width {
+  width: 49%;
+  margin-left: 1%;
+  max-width: 49%;
+}
