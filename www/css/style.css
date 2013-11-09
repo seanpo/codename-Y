@@ -1,8 +1,6 @@
 ﻿body {
     background-color: rgb(180, 10, 10);
-    margin: auto;
     height: 100%;
-    width: 800px;
     font-family: helvetica;
 }
 
@@ -59,9 +57,17 @@ button {
         text-align: center;
     }
 
-        #logo img {
-            max-width: 50%;
-        }
+	#logo img {
+		max-width: 50%;
+	}
+		
+	.Flexible-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}		
 }
 
 #loginError {
