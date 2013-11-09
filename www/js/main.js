@@ -1,8 +1,9 @@
 ﻿var contacts = null;
 $(document).ready(function () {
-    var id = getQueryStringParameterByName("id");
+    var id = localStorage.id;//getQueryStringParameterByName("id");
     //alert('http://' + server + '/listUser.php?id=' + id);
-    id = 1;
+    //id = 1;
+
     main.init(id);
 });
 var main = {

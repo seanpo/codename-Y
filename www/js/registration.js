@@ -6,7 +6,8 @@ $(document).ready(function () {
             type: 'POST',
             dataType: 'jsonp',
             success: function (data) {
-                window.location.href = "main.html?id=" + data[0].id;
+                localStorage.id = dVal.id;
+                window.location.href = "main.html";//?id=" + data[0].id;
             },
             error: function (data) {
                 //console.log('error');
