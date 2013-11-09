@@ -10,7 +10,8 @@
             success: function (data) {
                 var dVal = data[0];
                 if (dVal.success == "true") {
-                    window.location.href = "www/main.html?id=" + dVal.id;
+                    localStorage.id = dVal.id;
+                    window.location.href = "main.html";//?id=" + dVal.id;
                 } else {
                     $('#loginError').text("Wrong email and/or password");
                 }
