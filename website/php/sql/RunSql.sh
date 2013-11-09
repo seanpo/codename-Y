@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $* | mysql -u root -p palette
+cat $* | mysql -u root -p codenamey
