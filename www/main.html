@@ -24,17 +24,6 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Main</title>
-    <style type="text/css">
-        .businessInline {
-            display: inline-block;
-        }
-
-        #businessPhoto {
-        }
-
-        #businessFields {
-        }
-    </style>
     <script type="text/javascript" src="http://ecn.dev.virtualearth.net/MapControl/mapcontrol.ashx?v=6.3c">
     </script>
     <script type="text/javascript">
@@ -45,10 +34,14 @@
             //map.LoadMap(new VELatLong(47.62054, -122.34947), 16, VEMapStyle.Road, false);
         }
     </script>
+
 </head>
 <body onload="GetMap();">
+    <script type="text/javascript" src="/cordova-2.3.0.js"></script>
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <div id="BusinessCard">
-        <div id="businessPhoto" class="businessInline"></div>
+        <div id="businessPhoto" class="businessInline"><img src="asd" id="businessPhotoImg" /></div>
         <div id="businessFields" class="businessInline">
             <div id="nameFields">
                 <div id="fName" class="businessInline">N/A</div>
@@ -62,6 +55,8 @@
                 <div id="country" class="businessInline">N/A</div>
             </div>
             <div id="phone">N/A</div>
+            <div id="company">N/A</div>
+            <div id="email">N/A</div>
             <div id="fax">N/A</div>
             <div id="website">N/A</div>
             <div id="blurb">N/A</div>
