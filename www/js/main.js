@@ -37,9 +37,9 @@ var main = {
             dataType: 'jsonp',
             success: function (data) {
                 var s = "";
-                for (var i = 0; i < data.length; i++) {
-                    contacts = data;
-                    var dVal = data[i];
+				contacts= _.sortBy(data, function(a, b){ return new Date(a.timestamp).getTime()-new Date(b.timestamp).getTime() });
+                for (var i = 0; i < contacts.length; i++) {
+                    var dVal = contacts[i];
                     s += "<div class=\"fName\">" + dVal.first_name + "</div>";
                     s += "<div class=\"lName\">" + dVal.last_name + "</div>";
                     s += "<div class=\"email\">" + dVal.email + "</div>";
@@ -65,7 +65,7 @@ var main = {
                 //console.log('error');
             }
         });
-
+		
     },
 };
 
