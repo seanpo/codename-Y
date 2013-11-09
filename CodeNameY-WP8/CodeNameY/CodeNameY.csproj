@@ -144,6 +144,7 @@
     <Content Include="CordovaLib\WPCordovaClassLib.dll" />
     <Content Include="www\cordova-2.3.0.js" />
     <Content Include="www\www\css\index.css" />
+    <Content Include="www\www\css\style.css" />
     <Content Include="www\www\img\logo.png" />
     <Content Include="www\index.html" />
     <Content Include="www\index.js" />
@@ -152,6 +153,8 @@
     <Content Include="www\www\js\main.js" />
     <Content Include="www\www\js\template.js" />
     <Content Include="www\www\home.html" />
+    <Content Include="www\www\main.html" />
+    <Content Include="www\www\register.html" />
     <Content Include="www\www\template.html" />
     <None Include="cordova\debug.bat" />
     <None Include="cordova\emulate.bat" />
