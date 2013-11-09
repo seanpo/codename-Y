@@ -117,7 +117,7 @@
       return $expression->toString();
     }
 
-    private function addProperty($key, $value) {
+    public function addProperty($key, $value) {
       $this->$key = $value;
       $this->elements[$key] = $value;
     }

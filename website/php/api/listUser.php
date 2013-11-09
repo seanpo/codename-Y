@@ -11,7 +11,10 @@
   function transformRelationshipToUser($relationship) {
     $expression = new Expression("id", "=", $relationship->id_two);
     $users = Users::read($expression);
-    return $users[0]->toJson();
+    $user = $users[0];
+    $user->addProperty("location", $relationship->location);
+    $user->addProperty("timestamp", $relationship->timestamp);
+    return $user->toJson();
   }
 
   $userList = implode(",", array_map("transformRelationshipToUser", $relationshipList));
