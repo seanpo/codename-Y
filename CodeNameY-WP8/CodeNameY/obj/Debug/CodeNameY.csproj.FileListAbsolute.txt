@@ -1,0 +1,16 @@
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\ApplicationIcon.png
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\Background.png
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\CodeNameY.dll
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\CodeNameY.pdb
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\en-US\CodeNameY.resources.dll
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\AppManifest.xaml
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\Properties\WMAppManifest.xml
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\Bin\Debug\WPCordovaClassLib.dll
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\App.g.cs
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\MainPage.g.cs
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\CodeNameY.g.en-US.resources
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\en-US\CodeNameY.resources.dll
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\CodeNameY.dll
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\CodeNameY.pdb
+c:\users\sahil\documents\visual studio 2012\Projects\CodeNameY\CodeNameY\obj\Debug\XapCacheFile.xml
