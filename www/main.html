@@ -24,21 +24,43 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Registration</title>
+    <style type="text/css">
+        .businessInline {
+            display: inline-block;
+        }
+
+        #businessPhoto {
+            
+        }
+
+        #businessFields {
+        }
+    </style>
 </head>
 <body>
-    <input placeholder="First Name" id="fName" />
-    <input placeholder="Middle Initial" id="MI" />
-    <input placeholder="Last Name" id="lName" />
-    <input placeholder="Address" id="address" />
-    <input placeholder="City" id="city" />
-    <input placeholder="State" id="state" />
-    <input placeholder="Country" id="country" />
-    <input placeholder="Email" id="email" />
-    <input placeholder="Phone" id="phone" />
-    <input placeholder="Fax" id="fax" />
-    <input placeholder="Blurb" id="blurb" />
-    <input placeholder="Web Site" id="webSite" />
-    <input placeholder="Image" id="image" />
-    <button name="submit" type="submit" id="submit">Submit</button>
+    <div id="BusinessCard">
+        <div id="businessPhoto" class="businessInline"></div>
+        <div id="businessFields" class="businessInline">
+            <div id="nameFields">
+                <div id="fName" class="businessInline">N/A</div>
+                <div id="MI" class="businessInline">N/A</div>
+                <div id="lName" class="businessInline">N/A</div>
+            </div>
+            <div id="addressFields">
+                <div id="addressLn" class="businessInline">N/A</div>
+                <div id="city" class="businessInline">N/A</div>
+                <div id="state" class="businessInline">N/A</div>
+                <div id="country" class="businessInline">N/A</div>
+            </div>
+            <div id="phone">N/A</div>
+            <div id="fax">N/A</div>
+            <div id="website">N/A</div>
+            <div id="blurb">N/A</div>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div style="display:none;"></div>
+
 </body>
 </html>
